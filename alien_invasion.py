@@ -9,8 +9,9 @@ class AlienInvasion:
         """Инициализирует игру и создает игровые ресурсы"""
         pygame.init()
 
-        self.screen = pygame.display.set_mode((1200, 800))
+        self.screen = pygame.display.set_mode((600, 400))
         pygame.display.set_caption("Alien Invasion")
+        self.bg_color = (40, 70 ,70)
 
     def run_game(self):
         """Запуск основного цикла игры."""
@@ -19,7 +20,7 @@ class AlienInvasion:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
-
+            self.screen.fill(self.bg_color)
             #Отображение последнего прорисованного экрана.
             pygame.display.flip()
 
