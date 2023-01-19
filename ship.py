@@ -18,6 +18,7 @@ class Ship():
         #Флаг перемещения.
         self.moving_right = False
         self.moving_left = False
+        self.moving_up = False
 
     def update(self):
         """Обновляет позицию корабля с учетом флага"""
